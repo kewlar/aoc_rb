@@ -54,7 +54,6 @@ module AocRb
     end
 
     def create_puzzle(year, day)
-
     end
 
     def instructions_exist?(year, day, part)
