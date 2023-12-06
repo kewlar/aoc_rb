@@ -19,11 +19,11 @@ module AocRb
       solution = nil
       t = Benchmark.realtime do
         solution = yield
-        if !solution.nil?
+        if solution.nil?
+          puts "no result for #{part_name}"
+        else
           puts "Result for #{part_name}:"
           puts solution
-        else
-          puts "no result for #{part_name}"
         end
       end
       puts "(obtained in #{t} seconds)" unless solution.nil?
