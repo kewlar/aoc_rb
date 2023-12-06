@@ -13,7 +13,7 @@ module AocRb
       original_cwd = Dir.pwd
 
       loop do
-        if exe = find_executable
+        if (exe = find_executable)
           contents = File.read(exe)
 
           if /THIS IS THE BIN FILE/.match?(contents)
