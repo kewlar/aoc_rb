@@ -87,16 +87,16 @@ module AocRb
 
     desc "exec", "executes and optionally submits the puzzle for today, or the specified date"
     long_desc <<~LONGDESC
-      `exec` will check if you have instructions for PART 2 of today's puzzle. 
-      If you don't it will execute part 1, and offer to submit it for you. If 
-      you do have instructions for part 2, it will execute part 2 and offer to 
+      `exec` will check if you have instructions for PART 2 of today's puzzle.
+      If you don't it will execute part 1, and offer to submit it for you. If
+      you do have instructions for part 2, it will execute part 2 and offer to
       submit that.
 
-      In the event that you've recently submitted an incorrect answer and are 
+      In the event that you've recently submitted an incorrect answer and are
       being throttled, it will detect the remaining time you need to wait, and
       automatically submit your solution 1s after that delay.
 
-      You can optionally specify another day/year to exec if you're not working on 
+      You can optionally specify another day/year to exec if you're not working on
       today's puzzle.
     LONGDESC
     method_option :year, aliases: "-y", type: :numeric, default: Time.now.year
