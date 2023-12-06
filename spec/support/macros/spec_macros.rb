@@ -20,7 +20,7 @@ module SpecMacros
   end
 
   def clean_test_app
-    challenge_dirs = Dir[File.join(Dir.pwd, "testing", "challenges", "**")].reject { |path| path =~ /shared$/ }
+    challenge_dirs = Dir[File.join(Dir.pwd, "testing", "challenges", "**")].grep_v(/shared$/)
     challenge_dirs.each { |path| FileUtils.rm_rf path }
   end
 
