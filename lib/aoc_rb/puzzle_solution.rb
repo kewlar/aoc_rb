@@ -29,7 +29,7 @@ module AocRb
       if waiting && allow_waiting
         delay = 1
         time = waiting_regex.match(response.body)[1]
-        time_parts = time.split(" ")
+        time_parts = time.split
         time_parts.each do |part|
           if part.match?(/m/)
             delay += part.match(/(\d+)m/)[1].to_i * 60
