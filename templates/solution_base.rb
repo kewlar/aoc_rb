@@ -15,11 +15,11 @@ class Solution
 
   def data
     @data ||= begin
-                processed = @input.lines(chomp: true).map do |line|
-                  process_input line
-                end
+      processed = @input.lines(chomp: true).map do |line|
+        process_input line
+      end
 
-                processed.length == 1 ? processed.first : process_dataset(processed)
+      processed.length == 1 ? processed.first : process_dataset(processed)
     end
   end
 
