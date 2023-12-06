@@ -11,14 +11,14 @@ module AocRb
     end
 
     def create_required_directories(year, day)
-      padded_day = day.to_s.rjust(2, "0")
-      year_directory = File.join("challenges", year.to_s, padded_day)
+      padded_day = day.to_s.rjust(2, '0')
+      year_directory = File.join('challenges', year.to_s, padded_day)
       FileUtils.mkdir_p(year_directory) unless Dir.exist?(year_directory)
     end
 
     def puzzle_path(year, day)
-      padded_day = day.to_s.rjust(2, "0")
-      File.join("challenges", year.to_s, padded_day, "input.txt")
+      padded_day = day.to_s.rjust(2, '0')
+      File.join('challenges', year.to_s, padded_day, 'input.txt')
     end
 
     def download(year, day)
@@ -48,7 +48,7 @@ module AocRb
     def protect_against_early_download(content)
       return unless /the link will be enabled on the calendar the instant this puzzle becomes available/.match?(content)
 
-      puts "ERROR: This resource is not available for download yet"
+      puts 'ERROR: This resource is not available for download yet'
       exit 0
 
     end

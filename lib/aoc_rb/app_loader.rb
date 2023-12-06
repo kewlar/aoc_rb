@@ -7,7 +7,7 @@ module AocRb
     extend self
 
     RUBY = Gem.ruby
-    EXECUTABLES = ["bin/aoc", "script/aoc"]
+    EXECUTABLES = ['bin/aoc', 'script/aoc']
 
     def exec_app
       original_cwd = Dir.pwd
@@ -24,7 +24,7 @@ module AocRb
 
         Dir.chdir(original_cwd) && return if Pathname.new(Dir.pwd).root?
 
-        Dir.chdir("..")
+        Dir.chdir('..')
       end
     end
 

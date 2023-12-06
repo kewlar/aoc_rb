@@ -21,15 +21,15 @@ module AocRb
       waiting = waiting_regex.match?(response.body)
 
       doc = Nokogiri::HTML(response.body)
-      articles = doc.css("article")
+      articles = doc.css('article')
       puts articles[0].content
 
       puts "That's not the right answer" if wrong
-      puts "You have already completed this challenge" if already_complete
+      puts 'You have already completed this challenge' if already_complete
       if waiting && allow_waiting
         delay = 1
         time = waiting_regex.match(response.body)[1]
-        time_parts = time.split(" ")
+        time_parts = time.split(' ')
         time_parts.each do |part|
           if part.match?(/m/)
             delay += part.match(/(\d+)m/)[1].to_i * 60

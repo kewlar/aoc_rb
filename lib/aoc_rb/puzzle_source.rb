@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "benchmark"
+require 'benchmark'
 
 module AocRb
   module PuzzleSource
@@ -11,7 +11,7 @@ module AocRb
       begin
         Module.const_get("Year#{year}").const_get("Day#{padded_day}").new(input)
       rescue NameError
-        puts "There is no solution for this puzzle"
+        puts 'There is no solution for this puzzle'
       end
     end
 
