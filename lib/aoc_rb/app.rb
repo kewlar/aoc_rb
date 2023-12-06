@@ -113,7 +113,7 @@ module AocRb
       solution = PuzzleSource.run_part("part #{level}") { puzzle.send("part_#{level}") }
 
       puts "Submit solution? #{solution} (y/N)"
-      submit = STDIN.gets.chomp.downcase
+      submit = $stdin.gets.chomp.downcase
       puts "We said #{submit}"
 
       return unless submit == "y"
