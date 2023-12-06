@@ -31,7 +31,7 @@ module AocRb
       protect_against_early_download(content)
       create_required_directories year, day
       skip_if_exists(puzzle_path(year, day)) do
-        File.open(puzzle_path(year, day), "w") { |f| f.write content }
+        File.write(puzzle_path(year, day), content)
       end
     end
 

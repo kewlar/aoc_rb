@@ -24,9 +24,7 @@ module AocRb
         template = File.read(File.join(File.dirname(__FILE__), "../../templates", "solution.rb.erb"))
         @year = year.to_s
         @day = padded(day)
-        File.open(source_path, "w") do |f|
-          f.write ERB.new(template).result(binding)
-        end
+        File.write(source_path, ERB.new(template).result(binding))
       end
     end
 
@@ -38,9 +36,7 @@ module AocRb
         template = File.read(File.join(File.dirname(__FILE__), "../../templates", "solution_spec.rb.erb"))
         @year = year.to_s
         @day = padded(day)
-        File.open(spec_path, "w") do |f|
-          f.write ERB.new(template).result(binding)
-        end
+        File.write(spec_path, ERB.new(template).result(binding))
       end
     end
 
