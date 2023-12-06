@@ -53,8 +53,7 @@ module AocRb
       parse_and_save_instructions(year, day, content.body)
     end
 
-    def create_puzzle(year, day)
-    end
+    def create_puzzle(year, day); end
 
     def instructions_exist?(year, day, part)
       filename = File.join("challenges", year.to_s, padded(day), "#{part}.md")
