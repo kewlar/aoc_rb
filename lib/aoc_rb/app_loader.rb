@@ -7,7 +7,7 @@ module AocRb
     extend self
 
     RUBY = Gem.ruby
-    EXECUTABLES = ["bin/aoc", "script/aoc"]
+    EXECUTABLES = ["bin/aoc", "script/aoc"].freeze
 
     def exec_app
       original_cwd = Dir.pwd
