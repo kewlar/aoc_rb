@@ -1,10 +1,8 @@
 # frozen_string_literal: true
 
 module SpecMacros
-  def within_test_app
-    Dir.chdir("testing") do
-      yield
-    end
+  def within_test_app(&block)
+    Dir.chdir("testing", &block)
   end
 
   def remove_test_dir(*path)
