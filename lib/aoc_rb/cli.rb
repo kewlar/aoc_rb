@@ -45,7 +45,7 @@ module AocRb
 
       gemfile_dst = File.join(project_dir, "Gemfile")
       gemfile_src = File.join(File.dirname(__FILE__), "../../templates/Gemfile")
-      File.open(gemfile_dst, "w") { |f| f.write(File.read(gemfile_src))}
+      File.open(gemfile_dst, "w") { |f| f.write(File.read(gemfile_src)) }
     end
 
     desc "version", "prints the current installed version of AocRb"
