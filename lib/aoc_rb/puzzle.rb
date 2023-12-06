@@ -86,6 +86,7 @@ module AocRb
     def process_page_content(f, child, indent_level = 0, strip_em = false)
       # byebug
       return unless child.respond_to?(:name)
+
       case child.name
       when "text"
         f.write child.content.chomp.gsub("\n", "\n" + (" " * indent_level))
