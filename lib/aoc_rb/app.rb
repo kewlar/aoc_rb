@@ -141,7 +141,7 @@ module AocRb
     desc "spec", "runs tests for today, or the specified date"
     method_option :year, aliases: "-y", type: :numeric, default: Time.now.year
     method_option :day, aliases: "-d", type: :numeric, default: Time.now.day
-    method_option :all, :type => :boolean, :aliases => "--all"
+    method_option :all, type: :boolean, aliases: "--all"
 
     def spec(year = options[:year], day = options[:day])
       if options[:all]
