@@ -2,7 +2,7 @@
 require 'spec_helper'
 
 RSpec.describe Year<%= @year %>::Day<%= @day %> do
-  let(:input) { File.read(File.join(File.dirname(__FILE__), "../../../challenges/<%= @year %>/<%= @day.to_s.rjust(2, "0") %>/input.txt")) }
+  let(:input) { File.read(File.join(File.dirname(__FILE__), '../../../challenges/<%= @year %>/<%= @day.to_s.rjust(2, '0') %>/input.txt')) }
   let(:example_input) {
     <<~EOF
       change
@@ -10,22 +10,22 @@ RSpec.describe Year<%= @year %>::Day<%= @day %> do
     EOF
   }
 
-  describe "part 1" do
-    it "returns nil for the example input" do
+  describe 'part 1' do
+    it 'returns nil for the example input' do
       expect(described_class.part_1(example_input)).to eq(nil)
     end
 
-    xit "returns nil for my input" do
+    xit 'returns nil for my input' do
       expect(described_class.part_1(input)).to eq(nil)
     end
   end
 
-  xdescribe "part 2" do
-    it "returns nil for the example input" do
+  xdescribe 'part 2' do
+    it 'returns nil for the example input' do
       expect(described_class.part_2(example_input)).to eq(nil)
     end
 
-    xit "returns nil for my input" do
+    xit 'returns nil for my input' do
       expect(described_class.part_2(input)).to eq(nil)
     end
   end
