@@ -19,7 +19,7 @@ class Solution
         process_input line
       end
 
-                processed.length == 1 ? processed.first : process_dataset(processed)
+      processed.length == 1 ? processed.first : process_dataset(processed)
     end
   end
 

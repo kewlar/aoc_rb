@@ -96,14 +96,14 @@ module AocRb
       puts "We said #{submit}"
 
       return unless submit == "y"
-        return unless PuzzleSolution.submit(level, year, day, solution)
+      return unless PuzzleSolution.submit(level, year, day, solution)
 
-          puts "Correct!"
+      puts "Correct!"
 
-          return unless level == 1
+      return unless level == 1
 
-            puts "Downloading part 2!"
-            fetch_instructions(year, day)
+      puts "Downloading part 2!"
+      fetch_instructions(year, day)
           
         
       
