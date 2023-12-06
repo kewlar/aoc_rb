@@ -7,7 +7,7 @@ RSpec.describe AocRb::App do
   let(:day) { Time.now.day }
 
   describe "fetch_input" do
-    let(:puzzle_input) {
+    let(:puzzle_input) do
       <<~EOF
         Some
         collection
@@ -15,7 +15,7 @@ RSpec.describe AocRb::App do
         input
         data
       EOF
-    }
+    end
 
     before do
       stub_request(:get, "https://adventofcode.com/#{year}/day/#{day}/input").to_return({ body: puzzle_input })
@@ -47,7 +47,7 @@ RSpec.describe AocRb::App do
   end
 
   describe "fetch_instructions" do
-    let(:response_part_1) {
+    let(:response_part_1) do
       <<~EOF
         <!DOCTYPE html>
         <html lang="en-us">
@@ -186,8 +186,8 @@ RSpec.describe AocRb::App do
         </body>
         </html>
       EOF
-    }
-    let(:response_part_2) {
+    end
+    let(:response_part_2) do
       <<~EOF
         <!DOCTYPE html>
         <html lang="en-us">
@@ -351,9 +351,9 @@ RSpec.describe AocRb::App do
         </body>
         </html>
       EOF
-    }
+    end
 
-    let(:markdown_part_1) {
+    let(:markdown_part_1) do
       <<~EOF
         ## --- Day 2: Inventory Management System ---
 
@@ -382,8 +382,8 @@ RSpec.describe AocRb::App do
         **What is the checksum** for your list of box IDs?
 
       EOF
-    }
-    let(:markdown_part_2) {
+    end
+    let(:markdown_part_2) do
       <<~EOF
         ## --- Part Two ---
 
@@ -411,7 +411,7 @@ RSpec.describe AocRb::App do
         **What is the first frequency your device reaches twice?**
 
       EOF
-    }
+    end
 
     it "sends a GET request to AOC for today's instructions" do
       stub_request(:get, "https://adventofcode.com/#{year}/day/#{day}").to_return({ body: response_part_1 })
