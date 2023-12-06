@@ -146,10 +146,10 @@ module AocRb
 
     def spec(year = options[:year], day = options[:day])
       if options[:all]
-        Kernel.exec( "bundle exec rspec" )
+        Kernel.exec("bundle exec rspec")
       else
         spec_dir = File.join("spec", year.to_s, AocRb::Puzzle.padded(day))
-        Kernel.exec( "bundle exec rspec #{spec_dir}" )
+        Kernel.exec("bundle exec rspec #{spec_dir}")
       end
     end
 
