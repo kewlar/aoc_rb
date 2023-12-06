@@ -25,11 +25,11 @@ class Solution
 
   private
 
-    def process_input(line)
-      line
-    end
+  def process_input(line)
+    line
+  end
 
-    def process_dataset(set)
-      set
-    end
+  def process_dataset(set)
+    set
+  end
 end

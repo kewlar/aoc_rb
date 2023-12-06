@@ -24,16 +24,16 @@ module AocRb
 
     private
 
-      def puzzle_path(year, day)
-        "/#{year}/day/#{day}"
-      end
+    def puzzle_path(year, day)
+      "/#{year}/day/#{day}"
+    end
 
-      def input_path(year, day)
-        puzzle_path(year, day) + "/input"
-      end
+    def input_path(year, day)
+      puzzle_path(year, day) + "/input"
+    end
 
-      def answer_path(year, day)
-        puzzle_path(year, day) + "/answer"
-      end
+    def answer_path(year, day)
+      puzzle_path(year, day) + "/answer"
+    end
   end
 end
