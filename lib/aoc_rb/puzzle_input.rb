@@ -22,7 +22,7 @@ module AocRb
     end
 
     def download(year, day)
-      aoc_api = AocRb::AocApi.new(ENV['AOC_COOKIE'])
+      aoc_api = AocRb::AocApi.new(ENV.fetch('AOC_COOKIE', nil))
       content = aoc_api.puzzle_input(year, day)
       save_puzzle(year, day, content)
     end

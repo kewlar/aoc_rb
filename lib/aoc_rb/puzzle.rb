@@ -47,7 +47,7 @@ module AocRb
     def fetch_instructions(year, day)
       create_required_directories year, day
 
-      api = AocRb::AocApi.new(ENV['AOC_COOKIE'])
+      api = AocRb::AocApi.new(ENV.fetch('AOC_COOKIE', nil))
       content = api.puzzle_instructions(year, day)
 
       parse_and_save_instructions(year, day, content.body)
