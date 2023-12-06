@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "httparty"
 require 'dotenv/load'
 require "fileutils"
