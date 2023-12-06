@@ -13,7 +13,7 @@ module AocRb
     def create_required_directories(year, day)
       padded_day = day.to_s.rjust(2, "0")
       year_directory = File.join("challenges", year.to_s, padded_day)
-      FileUtils.mkdir_p(year_directory) unless Dir.exist?(year_directory)
+      FileUtils.mkdir_p(year_directory)
     end
 
     def puzzle_path(year, day)

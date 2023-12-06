@@ -19,7 +19,7 @@ module AocRb
     def create_source(year, day)
       source_dir = File.join("challenges", year.to_s, padded(day))
       source_path = File.join(source_dir, "solution.rb")
-      FileUtils.mkdir_p(source_dir) unless Dir.exist?(source_dir)
+      FileUtils.mkdir_p(source_dir)
       PuzzleInput.skip_if_exists(source_path) do
         template = File.read(File.join(File.dirname(__FILE__), "../../templates", "solution.rb.erb"))
         @year = year.to_s
@@ -31,7 +31,7 @@ module AocRb
     def create_spec(year, day)
       spec_dir = File.join("spec", year.to_s, padded(day))
       spec_path = File.join(spec_dir, "solution_spec.rb")
-      FileUtils.mkdir_p(spec_dir) unless Dir.exist?(spec_dir)
+      FileUtils.mkdir_p(spec_dir)
       PuzzleInput.skip_if_exists(spec_path) do
         template = File.read(File.join(File.dirname(__FILE__), "../../templates", "solution_spec.rb.erb"))
         @year = year.to_s
@@ -58,7 +58,7 @@ module AocRb
 
     def create_required_directories(year, day)
       year_directory = File.join("challenges", year.to_s, padded(day))
-      FileUtils.mkdir_p(year_directory) unless Dir.exist?(year_directory)
+      FileUtils.mkdir_p(year_directory)
     end
 
     def parse_and_save_instructions(year, day, content)
