@@ -11,7 +11,7 @@ module AocRb
         answer = level == 1 ? puzzle.part_1 : puzzle.part_2
       end
 
-      aoc_api  = AocApi.new(ENV['AOC_COOKIE'])
+      aoc_api  = AocApi.new(ENV.fetch('AOC_COOKIE', nil))
       response = aoc_api.submit_answer(year, day, level, answer)
       # puts response.body
 
