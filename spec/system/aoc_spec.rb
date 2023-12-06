@@ -10,6 +10,6 @@ RSpec.describe "aoc" do
   it "can create a new project" do
     expect { system %(aoc new dummy) }
       .to change { File.exist? "dummy" }
-            .from(false).to(true)
+      .from(false).to(true)
   end
 end
