@@ -18,7 +18,7 @@ module AocRb
       project_dir = File.join(Dir.getwd, name)
       if File.exist?(project_dir)
         puts "ERROR: #{project_dir} already exists!"
-        exit -1
+        exit(-1)
       end
 
       bin_dir = File.join(project_dir, "bin")
