@@ -32,6 +32,4 @@ Gem::Specification.new do |spec|
   spec.add_dependency "nokogiri", "~> 1.16"
   spec.add_dependency "rspec", "~> 3.13"
   spec.add_dependency "thor", "~> 1.3"
-
-  spec.add_development_dependency "webmock", "~> 3.24"
 end
