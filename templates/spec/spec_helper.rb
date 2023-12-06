@@ -9,5 +9,4 @@ Dir[File.join(File.dirname(__FILE__), "..", "challenges", "20*", "**", "*.rb")].
 end
 
 RSpec.configure do |config|
-
 end
