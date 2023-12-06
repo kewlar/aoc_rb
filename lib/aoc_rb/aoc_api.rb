@@ -29,11 +29,11 @@ module AocRb
     end
 
     def input_path(year, day)
-      puzzle_path(year, day) + "/input"
+      "#{puzzle_path(year, day)}/input"
     end
 
     def answer_path(year, day)
-      puzzle_path(year, day) + "/answer"
+      "#{puzzle_path(year, day)}/answer"
     end
   end
 end

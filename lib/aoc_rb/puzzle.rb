@@ -83,7 +83,7 @@ module AocRb
 
       case child.name
       when "text"
-        f.write child.content.chomp.gsub("\n", "\n" + (" " * indent_level))
+        f.write child.content.chomp.gsub("\n", "\n#{' ' * indent_level}")
       when "h2"
         f.write "## "
         process_children f, child.children, indent_level, strip_em
