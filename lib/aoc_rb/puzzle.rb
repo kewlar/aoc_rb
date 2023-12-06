@@ -78,7 +78,6 @@ module AocRb
     end
 
     def process_page_content(f, child, indent_level = 0, strip_em = false)
-      # byebug
       return unless child.respond_to?(:name)
 
       case child.name
@@ -112,7 +111,6 @@ module AocRb
         f.write "\n\n"
       else
         process_children f, child.children, indent_level, strip_em
-        # byebug
       end
     end
 
