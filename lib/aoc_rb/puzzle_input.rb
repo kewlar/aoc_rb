@@ -50,7 +50,6 @@ module AocRb
 
       puts 'ERROR: This resource is not available for download yet'
       exit 0
-
     end
   end
 end

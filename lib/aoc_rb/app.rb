@@ -104,7 +104,6 @@ module AocRb
 
       puts 'Downloading part 2!'
       fetch_instructions(year, day)
-
     end
 
     desc 'output', 'outputs results from your solution for the given day'
