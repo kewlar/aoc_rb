@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.description   = %q{Tools for creating a new project for your Advent of Code solutions, built using Ruby.}
   spec.homepage      = "https://github.com/pacso/aoc_rb"
   spec.license       = "MIT"
-  spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
+  spec.required_ruby_version = Gem::Requirement.new(">= 3.2.2")
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["changelog_uri"] = "https://github.com/pacso/aoc_rb/blob/main/CHANGELOG"
