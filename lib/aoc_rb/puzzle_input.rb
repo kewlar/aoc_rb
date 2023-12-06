@@ -36,10 +36,10 @@ module AocRb
     end
 
     def skip_if_exists(file)
-      unless File.exist? file
-        yield
-      else
+      if File.exist? file
         puts "#{file} already exists, skipping"
+      else
+        yield
       end
     end
 
