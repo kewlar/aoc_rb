@@ -20,7 +20,7 @@ class Solution
                 end
 
                 processed.length == 1 ? processed.first : process_dataset(processed)
-              end
+    end
   end
 
   private
