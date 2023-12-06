@@ -23,6 +23,7 @@ module AocRb
     end
 
     private
+
       def puzzle_path(year, day)
         "/#{year}/day/#{day}"
       end

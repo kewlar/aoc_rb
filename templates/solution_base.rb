@@ -24,6 +24,7 @@ class Solution
   end
 
   private
+
     def process_input(line)
       line
     end
