@@ -9,4 +9,7 @@ Dir[File.join(File.dirname(__FILE__), '..', 'challenges', '20*', '**', '*.rb')].
 end
 
 RSpec.configure do |config|
+  config.default_formatter = "doc"
+  config.example_status_persistence_file_path = ".rspec_status"
+  config.filter_run_when_matching :focus
 end
