@@ -452,7 +452,7 @@ RSpec.describe AocRb::App do
         AocRb::App.start %w[bootstrap -y 2018 -d 4]
         require File.join(Dir.pwd, "challenges", "2018", "04", "solution.rb")
 
-        expect { AocRb::App.start %w[output -y 2018 -d 4] }.to output("no result for part 1\n\nno result for part 2\n").to_stdout
+        expect { AocRb::App.start %w[output -y 2018 -d 4] }.to output(/Result for part 1:\ntest\n.+\nResult for part 2:\ntest/m).to_stdout
       end
     end
   end
