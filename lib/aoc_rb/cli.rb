@@ -23,28 +23,28 @@ module AocRb
 
       bin_dir = File.join(project_dir, "bin")
       bin_path = File.join(bin_dir, "aoc")
-      bin_template = File.join(File.dirname(__FILE__), "../../templates/bin/aoc")
+      bin_template = File.join(__dir__, "../../templates/bin/aoc")
       FileUtils.mkdir_p bin_dir
       File.write(bin_path, File.read(bin_template))
 
       shared_dir = File.join(project_dir, "challenges", "shared")
       solution_path = File.join(shared_dir, "solution.rb")
-      solution_template = File.join(File.dirname(__FILE__), "../../templates/solution_base.rb")
+      solution_template = File.join(__dir__, "../../templates/solution_base.rb")
       FileUtils.mkdir_p shared_dir
       File.write(solution_path, File.read(solution_template))
 
       spec_dir = File.join(project_dir, "spec")
       spec_helper_path = File.join(spec_dir, "spec_helper.rb")
-      spec_helper_template = File.join(File.dirname(__FILE__), "../../templates/spec/spec_helper.rb")
+      spec_helper_template = File.join(__dir__, "../../templates/spec/spec_helper.rb")
       FileUtils.mkdir_p spec_dir
       File.write(spec_helper_path, File.read(spec_helper_template))
 
       env_template_path = File.join(project_dir, ".env-template")
-      env_template = File.join(File.dirname(__FILE__), "../../templates/.env-template")
+      env_template = File.join(__dir__, "../../templates/.env-template")
       File.write(env_template_path, File.read(env_template))
 
       gemfile_dst = File.join(project_dir, "Gemfile")
-      gemfile_src = File.join(File.dirname(__FILE__), "../../templates/Gemfile")
+      gemfile_src = File.join(__dir__, "../../templates/Gemfile")
       File.write(gemfile_dst, File.read(gemfile_src))
     end
 

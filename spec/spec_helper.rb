@@ -9,10 +9,10 @@ require "thor"
 require 'webmock/rspec'
 WebMock.disable_net_connect!
 
-lib_path = File.join(File.dirname(__FILE__), "..", "lib", "aoc_rb", "*.rb")
+lib_path = File.join(__dir__, "..", "lib", "aoc_rb", "*.rb")
 Dir[lib_path].each { |file| require file }
 
-Dir[File.join(File.dirname(__FILE__), "support", "**", "*.rb")].each { |f| require f }
+Dir[File.join(__dir__, "support", "**", "*.rb")].each { |f| require f }
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

@@ -21,7 +21,7 @@ module AocRb
       source_path = File.join(source_dir, "solution.rb")
       FileUtils.mkdir_p(source_dir)
       PuzzleInput.skip_if_exists(source_path) do
-        template = File.read(File.join(File.dirname(__FILE__), "../../templates", "solution.rb.erb"))
+        template = File.read(File.join(__dir__, "../../templates", "solution.rb.erb"))
         @year = year.to_s
         @day = padded(day)
         File.write(source_path, ERB.new(template).result(binding))
@@ -33,7 +33,7 @@ module AocRb
       spec_path = File.join(spec_dir, "solution_spec.rb")
       FileUtils.mkdir_p(spec_dir)
       PuzzleInput.skip_if_exists(spec_path) do
-        template = File.read(File.join(File.dirname(__FILE__), "../../templates", "solution_spec.rb.erb"))
+        template = File.read(File.join(__dir__, "../../templates", "solution_spec.rb.erb"))
         @year = year.to_s
         @day = padded(day)
         File.write(spec_path, ERB.new(template).result(binding))
