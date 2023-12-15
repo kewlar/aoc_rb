@@ -26,6 +26,7 @@ module AocRb
         "solution_base.rb" => "challenges/shared/solution.rb",
         "spec/spec_helper.rb" => "spec/spec_helper.rb",
         ".env-template" => ".env-template",
+        ".rspec" => ".rspec",
         "Gemfile" => "Gemfile"
       }
 
