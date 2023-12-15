@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
-
 RSpec.describe AocRb::Puzzle do
   describe "#padded(day)" do
     it "returns 01 for 1" do

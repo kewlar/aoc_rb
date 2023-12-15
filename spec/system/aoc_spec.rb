@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
-
 RSpec.describe "aoc" do
   after do
     FileUtils.rm_rf(File.join(Dir.pwd, "dummy"))

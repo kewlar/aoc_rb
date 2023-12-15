@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
-
 RSpec.describe AocRb::App do
   let(:year) { Time.now.year }
   let(:day) { Time.now.day }
