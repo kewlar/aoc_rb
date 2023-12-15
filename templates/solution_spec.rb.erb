@@ -2,12 +2,12 @@
 
 RSpec.describe Year<%= @year %>::Day<%= @day %> do
   let(:input) { File.read(File.join(__dir__, '../../../challenges/<%= @year %>/<%= @day.to_s.rjust(2, '0') %>/input.txt')) }
-  let(:example_input) {
+  let(:example_input) do
     <<~EOF
       change
       me
     EOF
-  }
+  end
 
   describe 'part 1' do
     it 'solves for the example input' do
