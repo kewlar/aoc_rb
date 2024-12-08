@@ -46,10 +46,10 @@ module AocRb
     private
 
     def protect_against_early_download(content)
-      if /the link will be enabled on the calendar the instant this puzzle becomes available/.match?(content)
-        puts "ERROR: This resource is not available for download yet"
-        exit 0
-      end
+      return unless /the link will be enabled on the calendar the instant this puzzle becomes available/.match?(content)
+
+      puts "ERROR: This resource is not available for download yet"
+      exit 0
     end
   end
 end

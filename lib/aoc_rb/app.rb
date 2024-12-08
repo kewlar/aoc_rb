@@ -114,16 +114,15 @@ module AocRb
       submit = STDIN.gets.chomp.downcase
       puts "We said #{submit}"
 
-      if submit == "y"
-        if PuzzleSolution.submit(level, year, day, solution)
-          puts "Correct!"
+      return unless submit == "y"
+      return unless PuzzleSolution.submit(level, year, day, solution)
 
-          if level == 1
-            puts "Downloading part 2!"
-            fetch_instructions(year, day)
-          end
-        end
-      end
+      puts "Correct!"
+
+      return unless level == 1
+
+      puts "Downloading part 2!"
+      fetch_instructions(year, day)
     end
 
     desc "output", "outputs results from your solution for the given day"
