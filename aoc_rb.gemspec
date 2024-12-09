@@ -6,8 +6,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Jon Pascoe"]
   spec.email         = ["jon.pascoe@me.com"]
 
-  spec.summary       = %q{A Ruby toolkit for Advent of Code}
-  spec.description   = %q{Tools for creating a new project for your Advent of Code solutions, built using Ruby.}
+  spec.summary       = "A Ruby toolkit for Advent of Code"
+  spec.description   = "Tools for creating a new project for your Advent of Code solutions, built using Ruby."
   spec.homepage      = "https://github.com/pacso/aoc_rb"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 3.2.2")
